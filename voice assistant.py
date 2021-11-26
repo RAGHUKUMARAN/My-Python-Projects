@@ -6,7 +6,6 @@ import webbrowser
 import os
 import time
 import subprocess
-#from ecapture import ecapture as ec
 import wolframalpha
 import json
 import requests
@@ -130,9 +129,9 @@ if __name__=='__main__':
             speak(f"the time is {strTime}")
 
         elif 'who are you' in statement or 'what can you do' in statement:
-            speak('I am G-one version 1 point O your persoanl assistant. I am programmed to minor tasks like'
-                  'opening youtube,google chrome,gmail and stackoverflow ,predict time,take a photo,search wikipedia,predict weather' 
-                  'in different cities , get top headline news from times of india and you can ask me computational or geographical questions too!')
+            speak('I am your A I persoanl assistant. I am programmed to minor tasks like'
+                  'opening youtube,google chrome,gmail and stackoverflow ,predict time,search wikipedia,predict weather') 
+                  
 
 
         elif "who made you" in statement or "who created you" in statement or "who discovered you" in statement:
@@ -141,15 +140,7 @@ if __name__=='__main__':
 
         elif "open stackoverflow" in statement:
             webbrowser.open_new_tab("https://stackoverflow.com/login")
-            speak("Here is stackoverflow")
-
-        elif 'news' in statement:
-            news = webbrowser.open_new_tab("https://timesofindia.indiatimes.com/home/headlines")
-            speak('Here are some headlines from the Times of India,Happy reading')
-            time.sleep(6)
-
-        #elif "camera" in statement or "take a photo" in statement:
-            #ec.capture(0,"robo camera","img.jpg")
+            speak("opened stackoverflow")
 
         elif 'search'  in statement:
             statement = statement.replace("search", "")
@@ -157,7 +148,7 @@ if __name__=='__main__':
             time.sleep(5)
 
         elif 'ask' in statement:
-            speak('I can answer to computational and geographical questions and what question do you want to ask now')
+            speak('I can answer to any questions and what question do you want to ask now')
             question=takeCommand()
             app_id="V3KAHP-5X2X8WG2WH"
             client = wolframalpha.Client('V3KAHP-5X2X8WG2WH')
